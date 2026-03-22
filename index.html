@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cannabis Fundamentals — Moldavite Solutions</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e110d;--bg2:#151a13;--bg3:#1c2219;
+  --green:#a8c47a;--gd:#7a9e52;
+  --cream:#f0ead8;--muted:#8a9e78;--border:#2a3326;
+  --s:Georgia,'Times New Roman',serif;
+  --m:'Courier New',Courier,monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--m);font-size:15px;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--border);background:rgba(14,17,13,0.97)}
+.nb{font-family:var(--s);font-size:13px;letter-spacing:4px;color:var(--green);text-transform:uppercase}
+.nl{display:flex;gap:32px}
+.nl a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:2px;text-transform:uppercase;transition:color .2s}
+.nl a:hover{color:var(--green)}
+.nc{background:var(--green);color:var(--bg);padding:10px 24px;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.nc:hover{background:var(--gd)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 48px 80px;position:relative;overflow:hidden}
+.hl{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:480px;opacity:0.06;pointer-events:none}
+.hc{position:relative;z-index:1;max-width:780px}
+.ht{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--green);margin-bottom:24px;display:block}
+.hh{font-family:var(--s);font-size:clamp(60px,9vw,108px);line-height:1;letter-spacing:-2px;color:var(--cream);margin-bottom:8px}
+.hh em{color:var(--green);font-style:italic}
+.hs{font-size:16px;color:var(--muted);margin:28px 0 40px;max-width:520px;line-height:1.8}
+.ha{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+.bp{background:var(--green);color:var(--bg);padding:16px 36px;font-family:var(--m);font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .2s}
+.bp:hover{background:var(--gd)}
+.bg{border:1px solid var(--border);color:var(--muted);padding:16px 36px;font-family:var(--m);font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s}
+.bg:hover{border-color:var(--green);color:var(--green)}
+.fb{display:inline-flex;align-items:center;gap:8px;background:rgba(168,196,122,0.1);border:1px solid var(--green);padding:8px 16px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green)}
+hr{border:none;border-top:1px solid var(--border);margin:0}
+section{padding:100px 48px;position:relative;z-index:1}
+.sl{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--muted);margin-bottom:48px;display:block}
+.st{font-family:var(--s);font-size:clamp(36px,5vw,58px);line-height:1.1;letter-spacing:-1px;color:var(--cream);margin-bottom:24px}
+.st em{color:var(--green);font-style:italic}
+.about{background:var(--bg2)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px}
+.ab{color:var(--muted);line-height:1.9;font-size:15px}
+.ab p+p{margin-top:20px}
+.as{display:flex;flex-direction:column}
+.sr{padding:28px 0;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:16px}
+.sr:first-child{border-top:1px solid var(--border)}
+.sn{font-family:var(--s);font-size:48px;color:var(--green);line-height:1}
+.sk{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);max-width:1100px}
+.ci{background:var(--bg);padding:36px 32px;transition:background .2s}
+.ci:hover{background:var(--bg3)}
+.cn{font-size:11px;color:var(--muted);letter-spacing:3px;margin-bottom:16px;display:block}
+.ct{font-family:var(--s);font-size:22px;color:var(--cream);margin-bottom:10px;line-height:1.2}
+.cd{font-size:13px;color:var(--muted);line-height:1.7}
+.enroll{background:var(--bg2)}
+.enroll-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);max-width:900px;margin-bottom:40px}
+.ec{background:var(--bg);padding:48px 40px}
+.ec.feat{background:var(--bg3)}
+.et{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:block}
+.ea{font-family:var(--s);font-size:64px;color:var(--cream);line-height:1;margin-bottom:8px}
+.ea sup{font-size:24px;vertical-align:top;margin-top:12px;display:inline-block}
+.ea.free{color:var(--green)}
+.ed{color:var(--muted);font-size:13px;margin-bottom:32px;line-height:1.7}
+.ef{list-style:none;margin-bottom:36px}
+.ef li{padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);display:flex;gap:12px;align-items:center}
+.ef li::before{content:'--';color:var(--green)}
+.ef li:last-child{border-bottom:none}
+.eb{display:block;text-align:center;background:transparent;border:1px solid var(--green);color:var(--green);padding:14px;font-family:var(--m);font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+.eb:hover,.eb.fill{background:var(--green);color:var(--bg)}
+.eb.fill:hover{background:var(--gd)}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);max-width:900px}
+.step{background:var(--bg);padding:32px 28px}
+.step-num{font-family:var(--s);font-size:40px;color:var(--green);line-height:1;margin-bottom:16px}
+.step-title{font-family:var(--s);font-size:18px;color:var(--cream);margin-bottom:10px}
+.step-body{font-size:13px;color:var(--muted);line-height:1.7}
+.step-body a{color:var(--green);text-decoration:none}
+.discord-btn{display:inline-block;background:var(--green);color:var(--bg);padding:16px 40px;font-family:var(--m);font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s;margin-top:32px}
+.discord-btn:hover{background:var(--gd)}
+.sh{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:56px}
+.sc{font-family:var(--s);font-size:clamp(80px,12vw,140px);color:var(--green);line-height:1;letter-spacing:-4px}
+.sm{max-width:460px}
+.sm p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:16px}
+.af{background:var(--bg3);border:1px solid var(--border);padding:48px;max-width:680px}
+.fr{margin-bottom:28px}
+.fr label{display:block;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.fr input,.fr textarea,.fr select{width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--cream);font-family:var(--m);font-size:14px;padding:14px 18px;outline:none;transition:border-color .2s;border-radius:0;-webkit-appearance:none;appearance:none}
+.fr input:focus,.fr textarea:focus,.fr select:focus{border-color:var(--green)}
+.fr textarea{height:120px;resize:vertical}
+.fr select option{background:var(--bg2);color:var(--cream)}
+.ft{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fs{width:100%;background:var(--green);color:var(--bg);border:none;padding:18px;font-family:var(--m);font-size:13px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:background .2s;margin-top:8px}
+.fs:hover{background:var(--gd)}
+.fs:disabled{opacity:0.6;cursor:not-allowed}
+.fn{font-size:12px;color:var(--muted);margin-top:16px;text-align:center}
+.fok{display:none;text-align:center;padding:48px 24px}
+.fok .ck{font-family:var(--s);font-size:64px;color:var(--green);margin-bottom:16px}
+.fok h3{font-family:var(--s);font-size:28px;color:var(--cream);margin-bottom:12px}
+.fok p{color:var(--muted);font-size:14px}
+footer{padding:48px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.fob{font-family:var(--s);font-size:13px;letter-spacing:4px;color:var(--green);text-transform:uppercase}
+.fol{display:flex;gap:24px}
+.fol a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:1px;transition:color .2s}
+.fol a:hover{color:var(--green)}
+.foc{font-size:12px;color:var(--muted);width:100%;margin-top:8px}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:768px){
+  nav{padding:16px 24px}
+  .nl{display:none}
+  section{padding:64px 24px}
+  .hero{padding:110px 24px 60px}
+  .ag,.enroll-grid,.steps,.ft{grid-template-columns:1fr}
+  .af{padding:24px 20px}
+  footer{padding:32px 24px}
+  .sh{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nb">Moldavite Solutions</span>
+  <div class="nl">
+    <a href="#about">About</a>
+    <a href="#curriculum">Curriculum</a>
+    <a href="#enroll">Enroll</a>
+    <a href="#apply">Free Spots</a>
+  </div>
+  <a href="#enroll" class="nc">Enroll Now</a>
+</nav>
+
+<section class="hero">
+  <svg class="hl" viewBox="0 0 400 700" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200,680 C200,680 60,520 80,340 C100,160 220,120 240,40 C240,40 340,140 300,300 C260,460 180,480 180,580 C180,680 200,680 200,680 Z" fill="#a8c47a"/>
+    <path d="M200,660 C200,660 182,560 182,460 C182,360 260,320 295,200" fill="none" stroke="#a8c47a" stroke-width="3"/>
+    <path d="M230,530 C195,500 168,462 148,422" fill="none" stroke="#a8c47a" stroke-width="1.5"/>
+    <path d="M248,430 C216,398 194,360 180,318" fill="none" stroke="#a8c47a" stroke-width="1.5"/>
+    <path d="M264,330 C238,296 220,256 210,214" fill="none" stroke="#a8c47a" stroke-width="1.5"/>
+  </svg>
+  <div class="hc">
+    <span class="ht reveal">Cannabis Fundamentals - Moldavite Solutions</span>
+    <h1 class="hh reveal">Grow it <em>right.</em></h1>
+    <p class="hs reveal">A cultivation course built from 6+ years inside licensed cannabis - covering genetics, growing media, lighting, nutrients, IPM, harvest, and cure. Designed for every level of grower.</p>
+    <div class="ha reveal">
+      <a href="#enroll" class="bp">Enroll - $79</a>
+      <a href="https://discord.gg/EYZAzyYfYV" target="_blank" class="bg">Join Discord Free</a>
+    </div>
+    <div class="fb reveal">3 free spots available this year</div>
+  </div>
+</section>
+
+<hr/>
+
+<section class="about" id="about">
+  <span class="sl reveal">Who's teaching this</span>
+  <div class="ag">
+    <div class="reveal">
+      <h2 class="st">Built by someone <em>inside</em> the industry.</h2>
+      <div class="ab">
+        <p>I have been in licensed cannabis since 2019 - retail, cultivation, breeding, consulting. I built Moldavite Solutions because I kept watching growers piece things together from the internet and still come up short. There is a better way to learn this.</p>
+        <p>Cannabis Fundamentals is the course I wish existed when I started. I am not padding the curriculum or softening anything. This is how you actually grow - from picking your genetics to finishing your cure the right way.</p>
+        <p>Never touched a plant or got a few runs behind you and want to level up - either way this course is built for you.</p>
+      </div>
+    </div>
+    <div class="as reveal">
+      <div class="sr"><span class="sn">6+</span><span class="sk">Years in licensed cannabis</span></div>
+      <div class="sr"><span class="sn">50+</span><span class="sk">Strains bred</span></div>
+      <div class="sr"><span class="sn">3</span><span class="sk">Free spots this year</span></div>
+    </div>
+  </div>
+</section>
+
+<hr/>
+
+<section id="curriculum">
+  <span class="sl reveal">What you'll cover</span>
+  <h2 class="st reveal">Seed to harvest.<br/><em>All of it.</em></h2>
+  <br/>
+  <div class="cg reveal">
+    <div class="ci"><span class="cn">01</span><div class="ct">Genetics and strain selection</div><p class="cd">Understanding lineage, hybrid vs. landrace, how to read a seed bank, and what to look for before you even germinate.</p></div>
+    <div class="ci"><span class="cn">02</span><div class="ct">Growing media and rootzone</div><p class="cd">Soil, coco, rockwool, DWC - the tradeoffs, setup, and how your medium choice drives every decision downstream.</p></div>
+    <div class="ci"><span class="cn">03</span><div class="ct">Lighting</div><p class="cd">HPS, CMH, LED - spectrum, intensity, PPFD, photoperiod, and how to dial your environment for each growth stage.</p></div>
+    <div class="ci"><span class="cn">04</span><div class="ct">Nutrients and feeding</div><p class="cd">Macro/micronutrients, deficiency diagnosis, feed schedules, flushing - how to feed without burning and read what the plant is telling you.</p></div>
+    <div class="ci"><span class="cn">05</span><div class="ct">IPM</div><p class="cd">Integrated pest management from prevention to intervention. Thrips, spider mites, fungus gnats, powdery mildew - identification and treatment that actually works.</p></div>
+    <div class="ci"><span class="cn">06</span><div class="ct">Training techniques</div><p class="cd">LST, topping, manifolding, SCROG, lollipopping - when to use each and how to build a canopy that produces.</p></div>
+    <div class="ci"><span class="cn">07</span><div class="ct">Harvest and cure</div><p class="cd">Trichome reading, flush timing, wet vs. dry trim, drying environment, curing jars - how the finish determines the quality of everything you grew.</p></div>
+    <div class="ci"><span class="cn">08</span><div class="ct">Phenotype selection</div><p class="cd">How to run a pheno hunt, what you're looking for, keeper selection, and how breeders think - the part most growers skip.</p></div>
+    <div class="ci"><span class="cn">09</span><div class="ct">Join the community</div><p class="cd">Connect with other growers, post your journals, ask questions, and get direct access inside the Moldavite Solutions Discord. <a href="https://discord.gg/EYZAzyYfYV" target="_blank" style="color:var(--green);text-decoration:none">Join here</a></p></div>
+  </div>
+</section>
+
+<hr/>
+
+<section id="enroll" class="enroll">
+  <span class="sl reveal">Enrollment</span>
+  <h2 class="st reveal">Pick your path.</h2>
+  <br/>
+  <div class="enroll-grid reveal">
+    <div class="ec">
+      <span class="et">Fundamentals package</span>
+      <div class="ea"><sup>$</sup>79</div>
+      <p class="ed">One-time. Lifetime access. Full Fundamentals tier in the Discord.</p>
+      <ul class="ef">
+        <li>All 8 modules - The Grow</li>
+        <li>Fundamentals role in Discord</li>
+        <li>Course forum with tags and grow journals</li>
+        <li>Direct access to Javion</li>
+        <li>Community of growers at every level</li>
+      </ul>
+      <a href="#how-to-enroll" class="eb fill">Enroll via e-Transfer</a>
+    </div>
+    <div class="ec feat">
+      <span class="et">Free spot - application only</span>
+      <div class="ea free">Free</div>
+      <p class="ed">3 spots available this year. Hand-picked. Not a raffle - just real growers who want to learn.</p>
+      <ul class="ef">
+        <li>Full Fundamentals access at no cost</li>
+        <li>Same Discord tier as paid students</li>
+        <li>Limited to 3 spots this year</li>
+        <li>Selection based on your application</li>
+      </ul>
+      <a href="#apply" class="eb">Apply below</a>
+    </div>
+  </div>
+
+  <div id="how-to-enroll" style="max-width:900px">
+    <span class="sl reveal" style="margin-bottom:32px">How to enroll</span>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Send e-Transfer</div>
+        <p class="step-body">Send $79 CAD to<br/><a href="mailto:3moldavite6solutions9@gmail.com">3moldavite6solutions9@gmail.com</a><br/><br/>Include your name and Discord username in the message.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Join the Discord</div>
+        <p class="step-body">Join the Moldavite Solutions server while you wait. Free members are welcome - paid access unlocks after your payment is confirmed.<br/><br/><a href="https://discord.gg/EYZAzyYfYV" target="_blank">discord.gg/EYZAzyYfYV</a></p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Get your access</div>
+        <p class="step-body">Within 24 hours you will receive your Fundamentals role - unlocking The Grow modules, course forum, grow journals, and direct access channel.</p>
+      </div>
+    </div>
+    <a href="https://discord.gg/EYZAzyYfYV" target="_blank" class="discord-btn reveal">Join the Discord</a>
+  </div>
+</section>
+
+<hr/>
+
+<section id="apply">
+  <span class="sl reveal">Free spots</span>
+  <div class="sh">
+    <div class="sc reveal">3</div>
+    <div class="sm reveal">
+      <h2 class="st" style="font-size:clamp(28px,4vw,42px)">Free spots,<br/><em>real growers.</em></h2>
+      <p>Three spots. No raffle. I read every application myself and pick based on where you are at and where you are trying to go.</p>
+      <p>Be straight with it. That is all I need.</p>
+    </div>
+  </div>
+  <div class="af reveal">
+    <form id="appForm" action="https://formspree.io/f/xlgpyggj" method="POST">
+      <input type="hidden" name="_subject" value="New Free Spot Application - Cannabis Fundamentals"/>
+      <div class="ft">
+        <div class="fr">
+          <label>First name</label>
+          <input type="text" name="firstName" placeholder="First name" required/>
+        </div>
+        <div class="fr">
+          <label>Last name</label>
+          <input type="text" name="lastName" placeholder="Last name" required/>
+        </div>
+      </div>
+      <div class="fr">
+        <label>Your email</label>
+        <input type="email" name="email" placeholder="you@email.com" required/>
+      </div>
+      <div class="fr">
+        <label>Where are you at with growing?</label>
+        <select name="experience" required>
+          <option value="" disabled selected>Select your level</option>
+          <option value="never">Never grown - starting from zero</option>
+          <option value="beginner">1-2 grows under my belt</option>
+          <option value="intermediate">A few years in, want to level up</option>
+          <option value="experienced">Experienced grower - looking to learn new methods</option>
+        </select>
+      </div>
+      <div class="fr">
+        <label>Why do you want this spot?</label>
+        <textarea name="why" placeholder="Be straight with it. What's your situation and what are you trying to build?" required></textarea>
+      </div>
+      <div class="fr">
+        <label>What's one thing you've struggled with growing?</label>
+        <textarea name="struggle" placeholder="IPM, genetics, dialing environment - whatever it is." required></textarea>
+      </div>
+      <div class="fr">
+        <label>Instagram or TikTok handle (optional)</label>
+        <input type="text" name="social" placeholder="@yourhandle"/>
+      </div>
+      <button type="submit" class="fs" id="subBtn">Submit Application</button>
+      <p class="fn">Javion reviews every application personally. You will hear back within a week.</p>
+    </form>
+    <div class="fok" id="fok">
+      <div class="ck">*</div>
+      <h3>Application received.</h3>
+      <p>Javion will review it and get back to you within a week.<br/>Keep growing in the meantime.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="fob">Moldavite Solutions</span>
+  <div class="fol">
+    <a href="https://discord.gg/EYZAzyYfYV" target="_blank">Discord</a>
+    <a href="https://instagram.com/moldavitegardens" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@moldavitesolutions" target="_blank">TikTok</a>
+    <a href="mailto:3moldavite6solutions9@gmail.com">Email</a>
+  </div>
+  <p class="foc">2025 - 2026 Moldavite Solutions - Toronto, Ontario - All rights reserved</p>
+</footer>
+
+<script>
+var reveals = document.querySelectorAll('.reveal');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+  });
+},{threshold:0.08});
+reveals.forEach(function(r){io.observe(r);});
+document.querySelectorAll('.hero .reveal').forEach(function(el,i){
+  setTimeout(function(){el.classList.add('visible');},80+i*110);
+});
+document.getElementById('appForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var btn=document.getElementById('subBtn');
+  btn.disabled=true;
+  btn.textContent='Sending...';
+  fetch('https://formspree.io/f/xlgpyggj',{
+    method:'POST',
+    body:new FormData(this),
+    headers:{'Accept':'application/json'}
+  }).then(function(r){
+    if(r.ok){
+      document.getElementById('appForm').style.display='none';
+      document.getElementById('fok').style.display='block';
+    } else {
+      btn.disabled=false;
+      btn.textContent='Submit Application';
+      alert('Something went wrong. Email us at 3moldavite6solutions9@gmail.com');
+    }
+  }).catch(function(){
+    btn.disabled=false;
+    btn.textContent='Submit Application';
+    alert('Something went wrong. Email us at 3moldavite6solutions9@gmail.com');
+  });
+});
+</script>
+</body>
+</html>
